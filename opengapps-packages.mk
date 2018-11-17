@@ -95,8 +95,8 @@ ifneq ($(filter full,$(TARGET_GAPPS_VARIANT)),) # require at least full
 GAPPS_FORCE_BROWSER_OVERRIDES := true
 GAPPS_PRODUCT_PACKAGES += \
     Books \
+    CarrierServices \
     CloudPrint2 \
-    EditorsDocs \
     Drive \
     FitnessPrebuilt \
     PrebuiltKeep \
@@ -104,8 +104,6 @@ GAPPS_PRODUCT_PACKAGES += \
     Music2 \
     Newsstand \
     PlayGames \
-    EditorsSheets \
-    EditorsSlides \
     talkback
 
 ifneq ($(filter stock,$(TARGET_GAPPS_VARIANT)),) # require at least stock
@@ -134,12 +132,14 @@ GAPPS_PRODUCT_PACKAGES += \
     DigitalWellbeing
 endif
 
-ifneq ($(filter super,$(TARGET_GAPPS_VARIANT)),)
+ifneq ($(filter super,$(TARGET_GAPPS_VARIANT)),) # require at least super
 
 GAPPS_PRODUCT_PACKAGES += \
     Wallet \
     DMAgent \
-    CarrierServices \
+    EditorsDocs \
+    EditorsSheets \
+    EditorsSlides \
     GoogleEarth \
     GCS \
     GoogleHindiIME \

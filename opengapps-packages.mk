@@ -178,8 +178,13 @@ else
 DEVICE_PACKAGE_OVERLAYS += \
     $(GAPPS_DEVICE_FILES_PATH)/overlay/webview/21
 endif
+ifeq ($(GAPPS_USE_STUBS),true)
+PRODUCT_PACKAGES += \
+    WebViewStub
+else
 PRODUCT_PACKAGES += \
     WebViewGoogle
+endif
 endif
 
 ifeq ($(GAPPS_FORCE_BROWSER_OVERRIDES),true)

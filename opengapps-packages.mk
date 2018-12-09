@@ -82,9 +82,8 @@ endif
 
 ifneq ($(filter mini,$(TARGET_GAPPS_VARIANT)),) # require at least mini
 GAPPS_PRODUCT_PACKAGES += \
-    CalculatorGoogle \
+    CalculatorGooglePrebuilt \
     PrebuiltDeskClockGoogle \
-    PlusOne \
     Hangouts \
     Maps \
     Photos \
@@ -98,7 +97,6 @@ GAPPS_PRODUCT_PACKAGES += \
     CarrierServices \
     CloudPrint2 \
     Drive \
-    FitnessPrebuilt \
     PrebuiltKeep \
     Videos \
     Music2 \
@@ -113,7 +111,7 @@ GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 GAPPS_PRODUCT_PACKAGES += \
     GoogleCamera \
     GoogleContacts \
-    LatinImeGoogle \
+    LatinIMEGooglePrebuilt \
     StorageManagerGoogle \
     TagGoogle \
     GoogleVrCore
@@ -140,15 +138,17 @@ GAPPS_PRODUCT_PACKAGES += \
     EditorsDocs \
     EditorsSheets \
     EditorsSlides \
+    FitnessPrebuilt \
     GoogleEarth \
     GCS \
     GoogleHindiIME \
     GoogleJapaneseInput \
     KoreanIME \
     GooglePinyinIME \
-    Tycho \
+    PlusOne \
     Street \
     TranslatePrebuilt \
+    Tycho \
     GoogleZhuyinIME
 
 ifneq ($(filter 28,$(call get-allowed-api-levels)),)
